@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Tareas;
+using ApiNsp;
+
+List<Tarea> ListaTareas = await API.GetDatos();
+foreach (var Tarea in ListaTareas)
+{
+    Console.WriteLine(Tarea.Title);
+}
